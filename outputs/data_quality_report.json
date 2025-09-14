@@ -1,0 +1,69 @@
+{
+    "row_count": 9994,
+    "null_counts": {
+        "RowID": "0",
+        "OrderID": "0",
+        "Date": "0",
+        "ShipDate": "0",
+        "ShipMode": "0",
+        "CustomerID": "0",
+        "CustomerName": "0",
+        "Segment": "0",
+        "Country": "0",
+        "City": "0",
+        "State": "0",
+        "PostalCode": "0",
+        "Region": "0",
+        "ProductID": "0",
+        "Category": "0",
+        "SubCategory": "0",
+        "Product": "0",
+        "Revenue": "0",
+        "Quantity": "0",
+        "Discount": "0",
+        "Profit": "0",
+        "Year": "0",
+        "Month": "0",
+        "YearMonth": "0",
+        "Quarter": "0",
+        "MonthStart": "0",
+        "UnitPrice": "0"
+    },
+    "duplicate_order_ids": "4985",
+    "date_range": {
+        "min_date": "2014-01-03",
+        "max_date": "2017-12-30"
+    },
+    "numeric_stats": {
+        "Revenue": {
+            "min": 0.444,
+            "max": 22638.48,
+            "mean": 229.85800083049833,
+            "median": 54.489999999999995
+        },
+        "Quantity": {
+            "min": 1,
+            "max": 14,
+            "mean": 3.789573744246548,
+            "median": 3.0
+        }
+    },
+    "categorical_counts": {
+        "Region": {
+            "West": 3203,
+            "East": 2848,
+            "Central": 2323,
+            "South": 1620
+        },
+        "Category": {
+            "Office Supplies": 6026,
+            "Furniture": 2121,
+            "Technology": 1847
+        },
+        "Segment": {
+            "Consumer": 5191,
+            "Corporate": 3020,
+            "Home Office": 1783
+        }
+    }
+}

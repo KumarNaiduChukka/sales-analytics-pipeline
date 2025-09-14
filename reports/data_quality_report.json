@@ -1,0 +1,11 @@
+{
+    "row_count": 9994,
+    "column_count": 21,
+    "missing_values": {},
+    "duplicate_rows": 0,
+    "duplicate_order_ids": 7456,
+    "invalid_dates": 0,
+    "negative_zero_quantity": 0,
+    "negative_zero_revenue": 0,
+    "timestamp": "2025-09-13 17:37:46"
+}

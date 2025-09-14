@@ -1,0 +1,133 @@
+{
+  "dataset_name": "Sample - Superstore",
+  "analysis_date": "2023-08-01",
+  "row_count": 9994,
+  "column_count": 21,
+  "null_counts": {
+    "Row ID": 0,
+    "Order ID": 0,
+    "Order Date": 0,
+    "Ship Date": 0,
+    "Ship Mode": 0,
+    "Customer ID": 0,
+    "Customer Name": 0,
+    "Segment": 0,
+    "Country": 0,
+    "City": 0,
+    "State": 0,
+    "Postal Code": 0,
+    "Region": 0,
+    "Product ID": 0,
+    "Category": 0,
+    "Sub-Category": 0,
+    "Product Name": 0,
+    "Sales": 0,
+    "Quantity": 0,
+    "Discount": 0,
+    "Profit": 0
+  },
+  "duplicate_counts": {
+    "Order ID": 1240,
+    "explanation": "Multiple products can be ordered under the same Order ID"
+  },
+  "invalid_values": {
+    "dates": {
+      "Order Date": 0,
+      "Ship Date": 0
+    },
+    "numeric": {
+      "negative_quantity": 0,
+      "zero_quantity": 0,
+      "negative_sales": 0,
+      "zero_sales": 0
+    }
+  },
+  "data_types": {
+    "Row ID": "integer",
+    "Order ID": "string",
+    "Order Date": "datetime",
+    "Ship Date": "datetime",
+    "Ship Mode": "string",
+    "Customer ID": "string",
+    "Customer Name": "string",
+    "Segment": "string",
+    "Country": "string",
+    "City": "string",
+    "State": "string",
+    "Postal Code": "string",
+    "Region": "string",
+    "Product ID": "string",
+    "Category": "string",
+    "Sub-Category": "string",
+    "Product Name": "string",
+    "Sales": "float",
+    "Quantity": "integer",
+    "Discount": "float",
+    "Profit": "float"
+  },
+  "categorical_value_counts": {
+    "Ship Mode": {
+      "Standard Class": 5968,
+      "Second Class": 1945,
+      "First Class": 1538,
+      "Same Day": 543
+    },
+    "Segment": {
+      "Consumer": 5191,
+      "Corporate": 3020,
+      "Home Office": 1783
+    },
+    "Region": {
+      "West": 3203,
+      "East": 2848,
+      "Central": 2225,
+      "South": 1718
+    },
+    "Category": {
+      "Furniture": 2121,
+      "Office Supplies": 6026,
+      "Technology": 1847
+    }
+  },
+  "numeric_statistics": {
+    "Sales": {
+      "min": 0.444,
+      "max": 22638.48,
+      "mean": 229.858,
+      "median": 54.49,
+      "std": 623.245
+    },
+    "Quantity": {
+      "min": 1,
+      "max": 14,
+      "mean": 3.789,
+      "median": 3,
+      "std": 2.225
+    },
+    "Discount": {
+      "min": 0,
+      "max": 0.8,
+      "mean": 0.156,
+      "median": 0,
+      "std": 0.213
+    },
+    "Profit": {
+      "min": -6599.978,
+      "max": 8399.976,
+      "mean": 28.657,
+      "median": 8.666,
+      "std": 234.26
+    }
+  },
+  "data_quality_score": {
+    "completeness": 100,
+    "validity": 100,
+    "consistency": 95,
+    "overall": 98.3
+  },
+  "recommendations": [
+    "Verify that multiple products under the same Order ID represent valid order line items",
+    "Consider standardizing Postal Code format for consistency",
+    "Investigate orders with negative profit to understand business context"
+  ]
+}
