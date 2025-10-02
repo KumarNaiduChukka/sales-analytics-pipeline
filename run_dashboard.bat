@@ -1,0 +1,9 @@
+@echo off
+echo Starting Sales Analytics Dashboard...
+echo.
+echo Installing dependencies...
+pip install -r requirements.txt
+echo.
+echo Starting Streamlit dashboard...
+streamlit run streamlit_dashboard.py --server.port 8501 --server.headless true
+pause

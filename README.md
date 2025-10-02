@@ -1,100 +1,154 @@
-# Sales Analytics Pipeline
+# 📊 Sales Analytics Dashboard
 
-This project delivers a complete sales analytics pipeline using the Superstore dataset. It includes data ingestion, quality checks, exploratory data analysis, anomaly detection, summary tables, and a Power BI dashboard.
+An interactive EDA (Exploratory Data Analysis) dashboard built with Streamlit for analyzing sales data. This dashboard provides comprehensive insights into sales performance, customer behavior, and business trends.
 
-## Project Structure
+## 🚀 Features
 
-```
-├── data/
-│   ├── raw/             # Original data files
-│   └── processed/       # Cleaned and transformed data
-├── notebooks/           # Jupyter notebooks for analysis
-├── outputs/
-│   ├── figures/         # Generated charts and visualizations
-│   └── tables/          # Summary tables and exports
-├── reports/             # Documentation and reports
-├── dashboard/           # Power BI dashboard files
-├── requirements.txt     # Python package dependencies
-├── setup_env.ps1        # Environment setup script
-└── README.md            # This file
-```
+### 📈 Key Performance Indicators
+- Total Revenue, Orders, Average Order Value, and Profit Margin
+- Real-time metrics that update based on selected filters
 
-## Setup Instructions
+### 🌍 Regional Analysis
+- Revenue distribution across regions
+- Profit analysis by region
+- Interactive pie charts and bar charts
 
-### Prerequisites
+### 📦 Product Category Performance
+- Revenue analysis by product categories
+- Treemap visualization for subcategories
+- Profitability insights
 
-- Python 3.8 or higher
-- Power BI Desktop (for viewing and editing the dashboard)
+### 👥 Customer Segment Analysis
+- Revenue vs Profit scatter plots
+- Customer count by segment
+- Segment performance comparison
 
-### Environment Setup
+### ⏰ Time-based Analysis
+- Monthly revenue trends
+- Quarterly performance analysis
+- Revenue heatmap by year and month
 
-1. Clone or download this repository
-2. Open PowerShell in the project directory
-3. Run the setup script to create a virtual environment and install dependencies:
+### 💰 Profitability Deep Dive
+- Profit distribution histograms
+- Revenue vs Profit scatter plots
+- Break-even analysis
 
-```powershell
-.\setup_env.ps1
-```
+### 🏆 Top Performers
+- Top 10 products by revenue
+- Top 10 customers by revenue
+- Performance ranking with color coding
 
-Alternatively, you can set up the environment manually:
+### 🔗 Correlation Analysis
+- Correlation matrix heatmap
+- Relationship analysis between numeric variables
 
-```powershell
-# Create virtual environment
-python -m venv venv
+### 📊 Summary Statistics
+- Comprehensive data summaries
+- Categorical and numeric statistics
 
-# Activate virtual environment
-.\venv\Scripts\Activate.ps1
+## 🎨 Custom Styling
 
-# Install required packages
+The dashboard features:
+- Modern gradient backgrounds
+- Custom color schemes
+- Interactive hover effects
+- Responsive design
+- Professional typography
+- Insight boxes with key takeaways
+
+## 🛠️ Installation
+
+1. Install the required dependencies:
+```bash
 pip install -r requirements.txt
 ```
 
-## Running the Analysis
-
-1. Activate the virtual environment:
-
-```powershell
-.\venv\Scripts\Activate.ps1
+2. Run the dashboard:
+```bash
+streamlit run streamlit_dashboard.py
 ```
 
-2. Launch Jupyter Notebook:
+## 📁 Data Structure
 
-```powershell
-jupyter notebook
-```
+The dashboard expects a CSV file with the following columns:
+- `RowID`, `OrderID`, `Date`, `ShipDate`
+- `ShipMode`, `CustomerID`, `CustomerName`, `Segment`
+- `Country`, `City`, `State`, `PostalCode`, `Region`
+- `ProductID`, `Category`, `SubCategory`, `Product`
+- `Revenue`, `Quantity`, `Discount`, `Profit`
+- `Year`, `Month`, `YearMonth`, `Quarter`, `MonthStart`, `UnitPrice`
 
-3. Open the `notebooks/sales_analysis.ipynb` notebook
+## 🔍 Interactive Features
 
-## Key Deliverables
+### Filters
+- **Date Range**: Select specific time periods
+- **Region**: Filter by geographic regions
+- **Customer Segment**: Filter by customer types
+- **Product Category**: Filter by product categories
 
-- **Jupyter Notebook**: `notebooks/sales_analysis.ipynb` - Contains the full analytics pipeline including exploratory data analysis, data cleaning, quality checks, feature engineering, aggregation, anomaly detection, and visualization.
+### Visualizations
+- **Interactive Charts**: Hover for detailed information
+- **Zoom and Pan**: Explore data in detail
+- **Color Coding**: Visual indicators for performance
+- **Responsive Design**: Works on all screen sizes
 
-- **Summary Tables**: `outputs/tables/Summary_Tables.xlsx` - Excel file containing the following sheets:
-  - Revenue_by_Month
-  - Revenue_by_Region
-  - Top_Customers
-  - Top_Products
-  - Anomalies
+## 💡 Key Insights
 
-- **Power BI Dashboard**: `dashboard/Sales_Dashboard.pbix` - Interactive dashboard with KPIs, trends, regional performance, top products/customers, and anomaly detection.
+Each visualization includes:
+- **Insight Boxes**: Key takeaways and business implications
+- **Color Coding**: Visual performance indicators
+- **Trend Analysis**: Pattern identification
+- **Comparative Analysis**: Performance comparisons
 
-- **DAX Measures**: `dashboard/dax_measures.md` - Documentation of DAX measures used in the Power BI dashboard.
+## 🎯 Business Applications
 
-- **Data Quality Report**: `reports/data_quality_report.json` and `reports/Data_Quality_and_Assumptions.md` - Documentation of data quality checks, cleaning steps, and assumptions made during analysis.
+This dashboard helps with:
+- **Sales Performance Monitoring**: Track revenue and profit trends
+- **Customer Analysis**: Understand customer behavior and segments
+- **Product Performance**: Identify best and worst performing products
+- **Regional Analysis**: Optimize geographic strategies
+- **Seasonal Planning**: Identify seasonal patterns and opportunities
+- **Profitability Optimization**: Focus on high-margin products and customers
 
-- **Executive Summary**: `reports/Executive_Summary.md` - Summary of key findings and actionable recommendations.
+## 🔧 Technical Details
 
-## Data Processing Steps
+- **Framework**: Streamlit
+- **Visualization**: Plotly, Matplotlib, Seaborn
+- **Data Processing**: Pandas, NumPy
+- **Styling**: Custom CSS with gradients and animations
+- **Performance**: Cached data loading for optimal performance
 
-1. **Data Ingestion**: Load raw data from CSV/Excel files
-2. **Data Quality Checks**: Identify missing values, duplicates, and anomalies
-3. **Data Cleaning**: Handle missing values, standardize formats, and fix inconsistencies
-4. **Feature Engineering**: Create date-based features and derived metrics
-5. **Exploratory Analysis**: Generate summary statistics and visualizations
-6. **Anomaly Detection**: Identify outliers using statistical methods
-7. **Summary Tables**: Create aggregated views of the data
-8. **Dashboard Creation**: Build interactive visualizations in Power BI
+## 📈 Dashboard Sections
 
-## Contact
+1. **Header**: Professional title and description
+2. **KPI Cards**: Key metrics at a glance
+3. **Revenue Trends**: Time-series analysis
+4. **Regional Analysis**: Geographic performance
+5. **Product Analysis**: Category and subcategory insights
+6. **Customer Analysis**: Segment performance
+7. **Time Analysis**: Temporal patterns
+8. **Profitability**: Financial performance
+9. **Top Performers**: Best products and customers
+10. **Correlation**: Variable relationships
+11. **Summary**: Statistical overview
 
-For questions or feedback about this project, please contact the Data Analytics team.
+## 🚀 Getting Started
+
+1. Ensure your data file is in the correct location (`data/processed/FactSales_clean.csv`)
+2. Install dependencies: `pip install -r requirements.txt`
+3. Run the dashboard: `streamlit run streamlit_dashboard.py`
+4. Open your browser to the provided URL
+5. Use the sidebar filters to explore different data segments
+6. Interact with charts for detailed insights
+
+## 📊 Sample Insights
+
+- **Revenue Trends**: Identify seasonal patterns and growth opportunities
+- **Regional Performance**: Optimize geographic strategies
+- **Product Mix**: Focus on high-performing categories
+- **Customer Segments**: Tailor strategies to different customer types
+- **Profitability**: Identify areas for margin improvement
+
+---
+
+*Built with passion for practical data analysis and business intelligence* 🚀
